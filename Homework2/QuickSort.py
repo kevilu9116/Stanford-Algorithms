@@ -15,7 +15,6 @@ def quickSortPivotFirst(inputArray, left, right, numComparisons):
 	numComparisons += (right - left - 1) 
 	pivot = inputArray[left]
 	i = left + 1
-	# j = left + 1
 
 	#loop to partition the array around the pivot
 	for j in range(left + 1, right):
@@ -47,7 +46,6 @@ def quickSortPivotLast(inputArray, left, right, numComparisons):
 	inputArray[left], inputArray[right - 1] = swap(inputArray, left, right - 1) 
 	pivot = inputArray[left]
 	i = left + 1
-	# j = left + 1
 
 	#loop to partition the array around the pivot
 	for j in range(left + 1, right):
@@ -92,7 +90,6 @@ def quickSortPivotMid(inputArray, left, right, numComparisons):
 
 	pivot = inputArray[left]
 	i = left + 1
-	# j = left + 1
 
 	#loop to partition the array around the pivot
 	for j in range(left + 1, right):
@@ -125,8 +122,6 @@ def main():
 		sortedArray, numComparisons = quickSortPivotLast(inputArray, 0, len(inputArray), 0)
 	else:
 		sortedArray, numComparisons = quickSortPivotMid(inputArray, 0, len(inputArray), 0)
-
-	# inputFile = open(sys.argv[1], "r")
 
 	print sortedArray
 	print numComparisons
