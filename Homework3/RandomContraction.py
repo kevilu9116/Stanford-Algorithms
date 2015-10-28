@@ -4,6 +4,8 @@ import copy
 import sys
 import math
 
+#test branching
+
 class Graph:
 	def __init__(self, graphTxt, delimiter='\t'):
 		self.edgesFromNode = {}
