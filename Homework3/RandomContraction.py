@@ -90,7 +90,7 @@ def main():
 		if args.d == 'space':
 			originalGraph = Graph(inputFile, ' ')
 		else:
-			originalGraph = Graph(inputFile, d)
+			originalGraph = Graph(inputFile, args.d)
 	else:
 		originalGraph = Graph(inputFile)
 	inputFile.close()
@@ -102,7 +102,6 @@ def main():
 
 	bestMinCut = sys.maxint
 	for i in range(numRuns):
-		#print i
 		copyGraph = copy.deepcopy(originalGraph)
 		while copyGraph.getNumNodes() > 2:
 			randomEdge = copyGraph.selectRandomEdge()
