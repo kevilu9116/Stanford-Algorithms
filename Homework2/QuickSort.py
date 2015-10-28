@@ -11,8 +11,7 @@ def quickSortPivotFirst(inputArray, left, right, numComparisons):
 	if right - left == 0 or right - left == 1:
 		return inputArray, numComparisons
 
-	#keep running total of number of comparisons done by QuickSort
-	numComparisons += (right - left - 1) 
+	numComparisons += (right - left - 1) #keep running total of number of comparisons done by QuickSort
 	pivot = inputArray[left]
 	i = left + 1
 
